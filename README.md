@@ -99,6 +99,7 @@ then cuDNN will fail to be included. Here are three options:
 ## PyTorch source
 ```
 git clone https://github.com/pytorch/pytorch.git
+cd pytorch
 git checkout -b v0.1.10 v0.1.10
 ```
 
