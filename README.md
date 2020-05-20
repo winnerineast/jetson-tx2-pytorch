@@ -33,6 +33,18 @@ Check `cmake --version`. It looks like cmake >= 3.6 is required for the python b
 ## OpenCV
 I followed a subset of these excellent [instructions](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/) for Python 3 from the pyimagesearch blog. I skipped CUDA and OpenCL integration, and went system-wide with the Python 3 bindings (no virtualenvs). Under the OpenCV source directory, I created build/ and ran this:
 ```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential cmake pkg-config
+sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+sudo apt-get install libgtk-3-dev
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/4.3.0.zip
+unzip 4.3.0.zip
+cd opencv-4.3.0
+mkdir build
+cd build
 cmake \
     -D ENABLE_PRECOMPILED_HEADERS=OFF \
     -D WITH_OPENCL=OFF \
@@ -43,8 +55,9 @@ cmake \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=OFF \
     -D INSTALL_C_EXAMPLES=OFF \
-    -D PYTHON_EXECUTABLE=/usr/bin/python3.5 \
+    -D PYTHON_EXECUTABLE=/usr/bin/python3 \
     -D BUILD_EXAMPLES=OFF ..
+    make -j6
 ```
 The first option significantly reduces the storage requirements during the build, at the expense of a slightly longer build time. Before discovering this option, I encountered errors like "failed to copy PCH file" on the TX1.
 
