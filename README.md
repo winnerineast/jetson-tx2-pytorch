@@ -14,6 +14,7 @@ To avoid issues with system-wide installation as superuser, I appended `--user` 
  - sudo apt install libopenblas-dev liblapack-dev
  - sudo apt install liblapacke-dev checkinstall # For OpenCV
  - pip3 install cython
+ - sudo apt install gfortran
  - pip3 install numpy scipy  # ~20-30 min
 
 ## Build tool prerequisites
