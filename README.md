@@ -13,6 +13,7 @@ To avoid issues with system-wide installation as superuser, I appended `--user` 
 ## Scipy and LA libs
  - sudo apt install libopenblas-dev liblapack-dev
  - sudo apt install liblapacke-dev checkinstall # For OpenCV
+ - pip3 install cython
  - pip3 install numpy scipy  # ~20-30 min
 
 ## Build tool prerequisites
