@@ -11,7 +11,7 @@ The PyTorch developers recommend the Anaconda distribution. I was unable to find
 To avoid issues with system-wide installation as superuser, I appended `--user` to all `pip3 install` commands below. This puts packages in $HOME/.local/lib/python3.5/site-packages, which I added to my PYTHONPATH.
 
 ## Scipy and LA libs
- - sudo apt install libopenblas-dev libatlas-dev liblapack-dev
+ - sudo apt install libopenblas-dev liblapack-dev
  - sudo apt install liblapacke-dev checkinstall # For OpenCV
  - pip3 install numpy scipy  # ~20-30 min
 
